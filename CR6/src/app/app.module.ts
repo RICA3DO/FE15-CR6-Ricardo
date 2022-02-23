@@ -11,6 +11,8 @@ import { DetailsComponent } from './details/details.component';
 import { OrderComponent } from './order/order.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { HeroComponent } from './hero/hero.component';
     DetailsComponent,
     OrderComponent,
     FooterComponent,
-    HeroComponent
+    HeroComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

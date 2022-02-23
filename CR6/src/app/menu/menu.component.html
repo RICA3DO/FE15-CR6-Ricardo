@@ -1,1 +1,18 @@
-<p>menu works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="title text-center">Our Menu:</h2>
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let foods of foods">
+            <div class="card m-5 mx-5 pb-5 cards-style ">
+                <img src="{{foods.img}}" class="card-img-top" alt="{{foods.name}}">
+                <h3 class="card-text text-light bg-warning text-center fs-5 p-2">{{foods.name}}</h3>
+                <h3 class="text-center fs-5 p-1 m-2">Price: {{foods.price}} €</h3>
+                <h3 class="text-center fs-5 p-1 m-2">{{foods.available ? 'Food':'out of dough'}}</h3>
+                <div class="availability justify-content-center" *ngIf="foods.available"> <i aria-hidden="true">
+                        <h3 class="btn ${this.available ? 'true':'false'} btn-info d-flex justify-content-center text-center fs-3 m-4"
+                            routerLink="/foods/{{foods.id}}">Order</h3>
+                    </i></div>
+
+            </div>
+        </div>
+    </div>
+</div>
